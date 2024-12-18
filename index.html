@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prefix to Postfix Conversion</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2c2c2c;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            font-family: "Comic Sans MS";
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 2.5em;
+        }
+
+        .container {
+            padding: 40px;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .step {
+            background-color: pink;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .step h3 {
+            color: black;
+            font-size: 1.3em;
+        }
+
+        .step p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .stack {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: green;
+        }
+
+        .highlight {
+           /* background-color: paleturquoise;*/
+            font-weight: bold;
+            color: black;
+        }
+
+        .code {
+            background-color: #2c2c2c;
+            border: 1px solid #0288d1;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #2c2c;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            background-color: black;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+           /* background-color: #388e3c;*/
+           background-color: #2c2c2c;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+<header>
+    Prefix to Postfix Conversion
+</header>
+
+<div class="container">
+    <h2>Convert the Prefix Expression <span class="highlight">+ A * B C</span> to Postfix:</h2>
+
+    <div class="step">
+        <h3>Step 1: Start from the rightmost operator</h3>
+        <p>The first operator is <span class="highlight">+</span>. We need two operands for this operator.</p>
+    </div>
+
+    <div class="step">
+        <h3>Step 2: Push the operands onto the stack</h3>
+        <p>We start pushing operands onto the stack:</p>
+        <div class="stack">Stack: <span class="highlight">A</span></div>
+    </div>
+
+    <div class="step">
+        <h3>Step 3: Push more operands</h3>
+        <p>Next, we push operands <span class="highlight">B</span> and <span class="highlight">C</span> onto the stack:</p>
+        <div class="stack">Stack: <span class="highlight">A, B, C</span></div>
+    </div>
+
+    <div class="step">
+        <h3>Step 4: Process the '*' operator</h3>
+        <p>Pop the operands <span class="highlight">B</span> and <span class="highlight">C</span>, apply the <span class="highlight">*</span> operator, and push the result back onto the stack:</p>
+        <div class="stack">Stack: <span class="highlight">A, B C *</span></div>
+    </div>
+
+    <div class="step">
+        <h3>Step 5: Process the '+' operator</h3>
+        <p>Finally, we process the <span class="highlight">+</span> operator by popping <span class="highlight">A</span> and <span class="highlight">B C *</span>, applying the operator, and pushing the result:</p>
+        <div class="stack">Stack: <span class="highlight">A B C * +</span></div>
+    </div>
+
+    <div class="step">
+        <h3>Final Postfix Expression:</h3>
+        <p>The final postfix expression is:</p>
+        <div class="code">A B C * +</div>
+    </div>
+
+    <div class="button-container">
+        <a href="index1.html" class="btn" target="_self">Discover Next</a>
+    </div>
+</div>
+
+
+
+</body>
+</html>

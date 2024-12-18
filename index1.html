@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prefix to Postfix Converter with Animation</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Prefix to Postfix Conversion</h1>
+        
+        <label for="prefix">Enter Prefix Expression:</label>
+        <input type="text" id="prefix" placeholder="Enter Prefix Expression like +A*BC ">
+        
+        <button onclick="convert()">Convert</button>
+        
+        <div id="animation-container">
+            <h2>Conversion Process:</h2>
+            <div id="process"></div>
+        </div>
+        
+        <div id="result">
+            <h2>Postfix Expression:</h2>
+            <p id="postfix-output"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
